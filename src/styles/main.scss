@@ -1,9 +1,19 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
+$color-1: #2d3142;
+$color-2: #bfc0c0;
+$color-3: #DAE3E5;
+$color-4: #ef8354;
+$color-5: #4f5d75;
+
 body {
-  background-color: antiquewhite;
-  color: brown;
-  text-align: center;
-  margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $color-3;
+}
+
+
+
+#bio-description {
+  font-style: italic;
 }
