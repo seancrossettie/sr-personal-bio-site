@@ -1,5 +1,7 @@
-import 'bootstrap'; // import bootstrap elements and js
+import 'bootstrap';
 import '../styles/main.scss';
+import domBuilder from './components/domBuilder';
+import navBar from './components/navBar';
 import printToDom from './helpers/printToDom';
 
 const projects = [
@@ -28,17 +30,19 @@ const createProjecCards = (projectsArr) => {
                       <p class="card-text">${element.available}</p>
                       <p class="card-text">${element.url}</p>
                       <p class="card-text">${element.githubUrl}</p>
-                    </div>
+                    </div>()
                   </div>`;
     } else {
       domString = '';
     }
   });
 
-  printToDom('#projectsPage', domString);
+  printToDom('#projects-section', domString);
 };
 
 const init = () => {
+  domBuilder();
+  navBar();
   createProjecCards(projects);
 };
 
