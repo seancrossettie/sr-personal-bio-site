@@ -1,10 +1,6 @@
 import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
-
-const printToDom = (divId, textToPrint) => {
-  const selectedDiv = document.querySelector(divId);
-  selectedDiv.innerHTML = textToPrint;
-};
+import printToDom from './helpers/printToDom';
 
 const projects = [
   {
